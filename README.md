@@ -1,11 +1,27 @@
-# Bash-Calculator
-This is a bash calculator that works inside of a Terminal. This is made using purely Bash. It's an menu based calculator that can do more than anyting else.
+# 🧮 Bash Calculator
 
-*The Mehods are to Use this calulator are desribed below:*
+**Bash Calculator** is a simple, menu-based calculator that runs directly inside the terminal.  
+It is written entirely in **pure Bash** and provides an interactive way to perform calculations.
 
-At First it asks for first Number to Enter Like below:
+---
 
-**Enter Number1:**
+## ✨ Features
+
+- Runs inside a terminal
+- Written using pure Bash
+- Menu-based operator selection
+- Simple and interactive user experience
+
+---
+
+## 📖 How It Works
+
+The calculator operates in a step-by-step manner:
+
+### 1️⃣ Enter the First Number
+You will first be prompted to enter the initial number:
+```text
+Enter Number1:
 
 
 Secondly, It asks for you an oprator what do you want to do with those numbers please selct an oprator.(The oprator menu will be displayed) Like Below:
