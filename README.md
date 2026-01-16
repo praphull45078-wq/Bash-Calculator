@@ -36,3 +36,21 @@ Enter Number2:
 At last it will Show you whatever opration will be performed and what will be the Result.
 
 Feel Free to try it Once how it works :-)
+
+
+---
+
+
+## 🆕 Future New Feature
+GCD
+LCM
+SQURARE ROOT
+nCr
+Factorial
+Log10
+sin()
+cos()
+tan()
+cosec()
+sec()
+cot()
