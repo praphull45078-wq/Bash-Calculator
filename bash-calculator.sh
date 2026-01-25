@@ -1,6 +1,6 @@
 #!/bin/bash
 echo -e  "\e[31;23;222m A Menu Based Calculator. \e[0m"
-echo -e "\e[31;3;134m Below  operatation can be performed using operators.\n{1} Add\n{2} Subtract\n{3} Multiply\n{4} Division\n{5} Exponentiation(Number1 ≤ 3037000499 & Number2 ≥ 2)\n{6} Exit. \e[0m"
+echo -e "\e[31;3;134m Below  operatation can be performed using operators.\n{1} Add\n{2} Subtract\n{3} Multiply\n{4} Division\n{5} Exponentiation(Number1 ≤ 3037000499 & Number2 ≥ 2)\n{6} GCD\n{7} Exit. \e[0m"
 until [[ $number3 =~ ^-?[0-9]+$ ]]; do
  read -r -p "   Enter Number1: " number3
 done
@@ -31,6 +31,9 @@ case ${Choice1} in
   fi
  ;;
  6)
+  echo "Testing"
+ :;
+ 7)
   exit
  ;;
 esac
