@@ -32,7 +32,7 @@ case ${Choice1} in
  ;;
  6)
   echo "Testing"
- :;
+ ;;
  7)
   exit
  ;;
