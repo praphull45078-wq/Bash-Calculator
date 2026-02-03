@@ -42,11 +42,16 @@ Feel Free to try it Once how it works :-)
 
 
 ## 🆕 Future New Feature
-GCD
+simple interest calculator
+
 LCM
+
 SQURARE ROOT
+
 nCr
+
 Factorial
+
 Log10
 sin()
 cos()
