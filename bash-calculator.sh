@@ -57,9 +57,9 @@ case ${Choice1} in
  7)
   old_threshold="1"
   new_threshold=""
+  assume="2"
   while [[ "${old_threshold}" != "${new_threshold}" ]]; do
    if [[ $number2 -ge "2" ]]; then
-    assume="2" 
     first_sum(){
      echo "($number2 -1) * $assume" | bc
 }
