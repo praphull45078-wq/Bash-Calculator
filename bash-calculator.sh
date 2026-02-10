@@ -67,16 +67,17 @@ case ${Choice1} in
      echo " scale=3; $number1 / $assume^($number2 -1)" | bc
 }
     assume=$(echo "scale=3; ($(first_sum) + $(second_sum)) / $number2" | bc)
+    echo -n "$assume "
     old_threshold="$assume"
      first_sum(){
-     echo "($number2 -1) * $assume" | bc
+     echo " scale=3; $($number2 -1) * $assume" | bc
 }
      second_sum(){ 
       echo "$number1 / $assume^($number2 -1)" | bc
  }
-    assume=$(echo "scale=3; $(first_sum) + $(second_sum) / $number2" | bc)
+    assume=$(echo "scale=3; ($(first_sum) + $(second_sum)) / $number2" | bc)
     new_threshold="$assume"
-    echo "$assume" 
+    echo $(first_sum) 
   else
     echo "Number2 > 2"
    fi
