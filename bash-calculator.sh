@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo apt install bc || pkg install bc
 echo -e  "\e[36;1;40m A Menu Based Calculator. \e[0m"
-echo -e "\e[36;1;40m Below  operatation can be performed using operators.\n{1} Add\n{2} Subtract\n{3} Multiply\n{4} Division\n{5} Exponentiation(Number1 ≤ 3037000499 & Number2 ≥ 2)\n{6} GCD\n{7} LCM\n{8} ᵏ√n(ᵏ = number2)<Accuracy = till decimal 3 places>\n{9} Ratio\n{10}nPr<n=Number1, r=Number2>\n{11} Exit. \e[0m"
+echo -e "\e[36;1;40m Below  operatation can be performed using operators.\n{1} Add\n{2} Subtract\n{3} Multiply\n{4} Division\n{5} Exponentiation(Number1 ≤ 3037000499 & Number2 ≥ 2)\n{6} GCD\n{7} LCM\n{8} ᵏ√n(ᵏ = number2)<Accuracy = till decimal 3 places>\n{9} Ratio\n{10}nPr<n=Number1, r=Number2>\n{11} nCr\n{12} Exit. \e[0m"
 until [[ $number1 =~ ^-?[0-9]+$ ]]; do
  read -r -p "   Enter Number1: " number1
 done
@@ -139,6 +139,33 @@ case ${Choice1} in
 #End Comment
  ;;
  11)
+#NPR
+  kd=$(
+   for i in $(seq 0 $(($number2 - 1))); do
+    echo "$number1 - $i" | bc
+   done)
+ #The code to do multipy all terms in the varibale kd
+   product=1
+   while read -r num; do
+     product=$(echo "$product * $num" | bc)
+   done <<< "$kd"
+   npr=$(echo "nPr = " $product)
+#End NPR
+#For r!
+     ka=$(
+    for i in $(seq 0 $(($number2 - 1))); do
+     echo "$number1 - $i" | bc
+    done)
+  #The code to do multipy all terms in the varibale kd
+    product=1
+    while read -r num; do
+      product=$(echo "$product * $num" | bc)
+    done <<< "$kd"
+    npr=$(echo "nPr = " $product)
+#for r!
+#formula using nCr= nPr/r!
+ ;;
+ 12)
   exit
  ;;
  *)
