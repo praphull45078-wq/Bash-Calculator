@@ -149,19 +149,19 @@ case ${Choice1} in
    while read -r num; do
      product=$(echo "$product * $num" | bc)
    done <<< "$kd"
-   npr=$(echo "nPr = " $product)
+   npr=$(echo $product)
 #End NPR
 #For r!
      ka=$(
     for i in $(seq 0 $(($number2 - 1))); do
-     echo "$number1 - $i" | bc
+     echo "$number2 - $i" | bc
     done)
   #The code to do multipy all terms in the varibale kd
     product=1
     while read -r num; do
       product=$(echo "$product * $num" | bc)
-    done <<< "$kd"
-    npr=$(echo "nPr = " $product)
+    done <<< "$ka"
+    r_fact=$(echo $product)
 #for r!
 #formula using nCr= nPr/r!
  ;;
