@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo apt install bc || pkg install bc
 echo -e  "\e[36;1;40m A Menu Based Calculator. \e[0m"
-echo -e "\e[36;1;40m Below  operatation can be performed using operators.\n{1} Add\n{2} Subtract\n{3} Multiply\n{4} Division\n{5} Exponentiation(Number1 ≤ 3037000499 & Number2 ≥ 2)\n{6} GCD\n{7} LCM\n{8} ᵏ√n(ᵏ = number2)<Accuracy = till decimal 3 places>\n{9} Ratio\n{10}nPr<n=Number1, r=Number2>\n{11} nCr\n{12} Average\n{13} Area of Triangle\n{14} Hypotenuse\n{15} Simple Interest<time=1>\n{16} Geometric Mean\n{17} Harmonic Mean\n{18} Exit. \e[0m"
+echo -e "\e[36;1;40m Below  operatation can be performed using operators.\n{1} Add\n{2} Subtract\n{3} Multiply\n{4} Division\n{5} Exponentiation(Number1 ≤ 3037000499 & Number2 ≥ 2)\n{6} GCD\n{7} LCM\n{8} ᵏ√n(ᵏ = number2)<Accuracy = till decimal 3 places>\n{9} Ratio\n{10} nPr<n=Number1, r=Number2>\n{11} nCr\n{12} Average\n{13} Area of Triangle\n{14} Hypotenuse\n{15} Simple Interest<time=1>\n{16} Geometric Mean\n{17} Harmonic Mean\n{18} Modulus\n{19} RMS (Root Mean Square)\n{20} Contraharmonic Mean\n{21} Exit. \e[0m"
 until [[ $number1 =~ ^-?[0-9]+$ ]]; do
  read -r -p "   Enter Number1: " number1
 done
@@ -197,6 +197,27 @@ case ${Choice1} in
   echo " scale=3; $kf / $kg" | bc
  ;;
  18)
+  echo -n "Modulus : "
+  echo "$number1 % $number2" | bc
+ ;;
+ 19)
+  kh=$( echo "$((number1 * number1)) + $((number2 * number2))" | bc )
+
+  sqrt() { echo "sqrt($1)" | bc -l; }
+
+  echo -n "RMS (Root Mean Square) = "
+
+  ki=$(sqrt "$(echo "scale=6; $kh / 2" | bc -l)")
+
+  echo "scale=3; $ki" | bc
+ ;;
+ 20)
+  ki=$( echo "$((number1 * number1)) + $((number2 * number2))" | bc )
+  kj=$(echo "$number1 + $number2" | bc)
+  echo -n "Contraharmonic Mean = "
+  echo "scale=3; $ki / $kj" | bc
+ ;;
+ 21)
   exit
  ;;
  *)
