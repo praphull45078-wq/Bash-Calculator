@@ -59,3 +59,4 @@ tan()
 cosec()
 sec()
 cot()
+Praph Edits
